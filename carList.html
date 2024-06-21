@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Cars</title>
+    <style>
+        body {
+            font-family:Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+        .search-container {
+            margin: 50px auto;
+            text-align: right;
+        }
+        .search-input {
+            width: 250px;
+            padding: 10px;
+            font-size: 15px;
+        }
+        .search-button {
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .car-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .car-card {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        .car-card img {
+            width: 350px;
+            height: 200px;
+            border-radius: 10px;
+        }
+        .car-card h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #333;
+        }
+        .car-card p {
+            font-size: 1em;
+            margin: 5px 0;
+            color: #666;
+        }
+        .car-card .price {
+            font-size: 1.2em;
+            color: #e67e22;
+            margin-top: 10px;
+        }
+        .action-buttons {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .action-buttons button {
+            padding: 10px 20px;
+            font-size: 1em;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .rent-now {
+            background-color: #191970;
+        
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 style="color: #191970; font-size: 65px; font-style: italic;">OSACAR</h1>  
+    <h1 style="color: #ffffff; font-size: 40px; font-style: italic;">View Car</h1>  
+    
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search for car...">
+        <button onclick="performSearch()" class="search-button">Search</button>
+    </div>
+    
+    <div class="car-grid">
+<!-- Car 1 -->
+        <div class="car-card">
+            <img src="yaris.png" alt="Car 1">
+            <h2>Toyota YARIS</h2>
+            <p>Make: Toyota</p>
+            <p>Model: YARIS</p>
+            <p>Year: 2023</p>
+            <p>Mileage: 15,000 km</p>
+            <p>Color: Pink</p>
+            <p class="price">Price/hour: RM50</p>
+            
+            <div class="action-buttons">
+                <button class="rent-now">Rent Now</button>                
+            </div>
+        </div>
+<!-- Car 2 -->
+        <div class="car-card">
+            <img src="civic.png" alt="Car 2">
+            <h2>Honda CIVIC</h2>
+            <p>Make: Honda</p>
+            <p>Model: CIVIC</p>
+            <p>Year: 2022</p>
+            <p>Mileage: 20,000 km</p>
+            <p>Color: Blue</p>
+            <p class="price">Price/hour: RM45</p>
+            
+            <div class="action-buttons">
+                <button class="rent-now">Rent Now</button>                
+            </div>
+        </div>
+<!-- Car 3 -->
+        <div class="car-card">
+            <img src="ford.png" alt="Car 3">
+            <h2>Ford RANGER</h2>
+            <p>Make:Ford</p>
+            <p>Model: RANGER</p>
+            <p>Year: 2021</p>
+            <p>Mileage: 25,000 km</p>
+            <p>Color: Black</p>
+            <p class="price">Price/hour: RM55</p>
+            
+            <div class="action-buttons">
+                <button class="rent-now">Rent Now</button>
+                
+            </div>
+            
+        </div>
+<!-- Car 4 -->
+        <div class="car-card">
+            <img src="myvi.png" alt="Car 4">
+            <h2>Perodua MYVI</h2>
+            <p>Make: Perodua</p>
+            <p>Model: MYVI</p>
+            <p>Year:2020</p>
+            <p>Mileage: 30,000 km</p>
+            <p>Color: White</p>
+            <p class="price">Price/hour: RM60</p>
+            
+            <div class="action-buttons">
+                <button class="rent-now">Rent Now</button>
+                
+            </div>
+            
+        </div>
+<!-- Car 5 -->
+        <div class="car-card">
+            <img src="X5.png" alt="Car 5">
+            <h2>BMW X5</h2>
+            <p>Make: BMW</p>
+            <p>Model: X5</p>
+            <p>Year: 2019</p>
+            <p>Mileage: 35,000 km</p>
+            <p>Color: Silver</p>
+            <p class="price">Price/hour: RM70</p>
+            
+            <div class="action-buttons">
+                <button class="rent-now">Rent Now</button>
+            </div>
+            
+        </div>
+<!-- Car 6 -->
+        <div class="car-card">
+            <img src="saga.png" alt="Car 5">
+            <h2>Proton SAGA</h2>
+            <p>Make: Proton</p>
+            <p>Model: SAGA</p>
+            <p>Year: 2012</p>
+            <p>Mileage: 35,000 km</p>
+            <p>Color: Red</p>
+            <p class="price">Price/hour: RM30</p>
+            
+            <div class="action-buttons">
+                <button class="rent-now">Rent Now</button>
+            </div>
+    </div>
+</div>
+    <script>
+        function performSearch() {
+            var searchTerm = document.getElementById('searchInput').value;
+            if (searchTerm) {
+                alert('You searched for: ' + searchTerm);
+                // Here you can add code to perform the search, e.g., redirect to a search results page
+                // window.location.href = 'searchResults.html?query=' + encodeURIComponent(searchTerm);
+            } else {
+                alert('Please enter a search term.');
+            }
+        }
+    </script>
+
+</body>
+</html>
+
