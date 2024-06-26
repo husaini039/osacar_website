@@ -34,7 +34,24 @@
       </div>
     </div>
     </div>
-  </div>           
+  </div>   
+
+<div class="container-5" id="adminContent" style="display: none;">
+    <div class="small-container-5">
+      <!-- Admin content goes here -->
+      <h1>Admin Panel</h1>
+      <p>Welcome, Admin!</p>
+    </div>
+  </div>
+
+  <div class="container-5" id="customerContent">
+    <div class="small-container-5">
+      <!-- Customer content goes here -->
+      <h1>Welcome, Customer!</h1>
+      <p>Explore our car rental services.</p>
+    </div>
+  </div>
+        
           <div class="container-5" id="cars">
               <div class="small-container-5">
                 <div class="row">
@@ -118,5 +135,20 @@
         <p>© 2024 Osacar. All Rights Reserved.</p>
             <a href="#" style = "color: black">Contact Us</a>
     </footer>
+          
+          <script>
+    // Example: Assume 'isAdmin' is set based on login status
+    var isAdmin = false; // Change this based on actual login status
+
+    document.addEventListener('DOMContentLoaded', function () {
+      if (isAdmin) {
+        document.getElementById('adminContent').style.display = 'block';
+        document.getElementById('customerContent').style.display = 'none';
+      } else {
+        document.getElementById('adminContent').style.display = 'none';
+        document.getElementById('customerContent').style.display = 'block';
+      }
+    });
+  </script>
     </body>
 </html>
